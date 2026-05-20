@@ -30,5 +30,9 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/home'])
   }
 
+  onSignup() {
+    this.router.navigate(['/signup'])
+  }
+
 
 }
