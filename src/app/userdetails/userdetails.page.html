@@ -1,0 +1,75 @@
+<div class="render-tracker ion-padding">
+  <div class="tracker-header">
+    <ion-icon name="refresh-outline" color="secondary"></ion-icon>
+    <ion-text color="medium">
+      <span>OnPush Tracking</span>
+    </ion-text>
+    <ion-badge color="secondary" slot="end">v1.0</ion-badge>
+  </div>
+  <div class="tracker-stats">
+    <div class="stat-item">
+      <span class="stat-label">Render Cycle:</span>
+      <ion-badge color="primary">#{{ renderInfo.count }}</ion-badge>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Last Change:</span>
+      <span class="stat-value">{{ renderInfo.time }}</span>
+    </div>
+  </div>
+</div>
+
+<ion-accordion-group expand="inset">
+  <ion-accordion *ngFor="let user of users" [value]="user.id">
+    <!-- ... same accordion items ... -->
+    <ion-item slot="header" lines="none" class="accordion-header">
+      <ion-icon name="person-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>
+        <h2 class="user-name">{{ user.name }}</h2>
+        <p class="user-subtitle">
+          <ion-icon name="mail-outline"></ion-icon> {{ user.email }}
+        </p>
+        <p class="user-subtitle">
+          <ion-icon name="call-outline"></ion-icon> {{ user.phone }}
+        </p>
+
+        <p class="user-subtitle">
+          <ion-icon name="call-outline"></ion-icon> {{ user.address.street }}
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <div class="ion-padding accordion-content" slot="content">
+      <div class="address-container">
+        <div class="address-header">
+          <ion-icon name="location-outline" color="primary"></ion-icon>
+          <ion-text color="dark">
+            <h3>Address Details</h3>
+          </ion-text>
+        </div>
+
+        <div class="address-details">
+          <div class="detail-row">
+            <span class="label">Street:</span>
+            <span class="value">{{ user.address.street }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Locality:</span>
+            <span class="value">{{ user.address.locality }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">City:</span>
+            <span class="value">{{ user.address.city }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">State:</span>
+            <span class="value">{{ user.address.state }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">ZIP Code:</span>
+            <span class="value">{{ user.address.zip }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>
