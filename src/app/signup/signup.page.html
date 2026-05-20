@@ -11,16 +11,11 @@
 
       <ion-card-content>
         <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
-          
-          <ion-row>
+
+          <ion-row class="input-wrapper">
             <ion-col size="6" class="ion-no-padding" style="padding-right: 4px;">
-              <ion-input 
-                class="custom-input"
-                fill="outline" 
-                label="First Name" 
-                labelPlacement="floating" 
-                placeholder="First"
-                formControlName="firstName">
+              <ion-input class="custom-input" fill="outline" label="First Name" labelPlacement="floating"
+                placeholder="First" formControlName="firstName">
               </ion-input>
               <div class="error-msg" *ngIf="(isSubmitted || f['firstName'].touched) && f['firstName'].errors">
                 <span *ngIf="f['firstName'].errors['required']">Required</span>
@@ -28,13 +23,8 @@
               </div>
             </ion-col>
             <ion-col size="6" class="ion-no-padding" style="padding-left: 4px;">
-              <ion-input 
-                class="custom-input"
-                fill="outline" 
-                label="Last Name" 
-                labelPlacement="floating" 
-                placeholder="Last"
-                formControlName="lastName">
+              <ion-input class="custom-input" fill="outline" label="Last Name" labelPlacement="floating"
+                placeholder="Last" formControlName="lastName">
               </ion-input>
               <div class="error-msg" *ngIf="(isSubmitted || f['lastName'].touched) && f['lastName'].errors">
                 <span *ngIf="f['lastName'].errors['required']">Required</span>
@@ -44,14 +34,8 @@
           </ion-row>
 
           <div class="input-wrapper">
-            <ion-input 
-              class="custom-input"
-              type="email"
-              fill="outline" 
-              label="Email Address" 
-              labelPlacement="floating" 
-              placeholder="Enter your email"
-              formControlName="email">
+            <ion-input class="custom-input" type="email" fill="outline" label="Email Address" labelPlacement="floating"
+              placeholder="Enter your email" formControlName="email">
               <ion-icon slot="start" name="mail-outline" aria-hidden="true"></ion-icon>
             </ion-input>
             <div class="error-msg" *ngIf="(isSubmitted || f['email'].touched) && f['email'].errors">
@@ -61,32 +45,21 @@
           </div>
 
           <div class="input-wrapper">
-            <ion-input 
-              class="custom-input"
-              type="tel"
-              fill="outline" 
-              label="Mobile Number" 
-              labelPlacement="floating" 
-              placeholder="Enter your mobile"
-              formControlName="mobileNumber">
+            <ion-input class="custom-input" type="tel" fill="outline" label="Mobile Number" labelPlacement="floating"
+              placeholder="Enter your mobile" formControlName="mobileNumber">
               <ion-icon slot="start" name="call-outline" aria-hidden="true"></ion-icon>
             </ion-input>
             <div class="error-msg" *ngIf="(isSubmitted || f['mobileNumber'].touched) && f['mobileNumber'].errors">
               <span *ngIf="f['mobileNumber'].errors['required']">Required</span>
-              <span *ngIf="f['mobileNumber'].errors['minlength'] || f['mobileNumber'].errors['maxlength']">Must be exactly 10 digits</span>
+              <span *ngIf="f['mobileNumber'].errors['minlength'] || f['mobileNumber'].errors['maxlength']">Must be
+                exactly 10 digits</span>
               <span *ngIf="f['mobileNumber'].errors['pattern']">Numbers only</span>
             </div>
           </div>
 
           <div class="input-wrapper">
-            <ion-input 
-              class="custom-input"
-              type="password"
-              fill="outline" 
-              label="Password" 
-              labelPlacement="floating" 
-              placeholder="Create a password"
-              formControlName="password">
+            <ion-input class="custom-input" type="password" fill="outline" label="Password" labelPlacement="floating"
+              placeholder="Create a password" formControlName="password">
               <ion-icon slot="start" name="lock-closed-outline" aria-hidden="true"></ion-icon>
               <ion-input-password-toggle slot="end"></ion-input-password-toggle>
             </ion-input>
@@ -97,21 +70,16 @@
           </div>
 
           <div class="input-wrapper">
-            <ion-input 
-              class="custom-input"
-              type="password"
-              fill="outline" 
-              label="Confirm Password" 
-              labelPlacement="floating" 
-              placeholder="Confirm your password"
-              formControlName="confirmPassword">
+            <ion-input class="custom-input" type="password" fill="outline" label="Confirm Password"
+              labelPlacement="floating" placeholder="Confirm your password" formControlName="confirmPassword">
               <ion-icon slot="start" name="lock-closed-outline" aria-hidden="true"></ion-icon>
               <ion-input-password-toggle slot="end"></ion-input-password-toggle>
             </ion-input>
             <div class="error-msg" *ngIf="(isSubmitted || f['confirmPassword'].touched) && f['confirmPassword'].errors">
               <span *ngIf="f['confirmPassword'].errors['required']">Required</span>
             </div>
-            <div class="error-msg" *ngIf="(isSubmitted || f['confirmPassword'].touched) && signupForm.hasError('passwordMismatch')">
+            <div class="error-msg"
+              *ngIf="(isSubmitted || f['confirmPassword'].touched) && signupForm.hasError('passwordMismatch')">
               <span>Passwords do not match</span>
             </div>
           </div>
@@ -134,7 +102,7 @@
               </ion-col>
             </ion-row>
           </ion-grid>
-          
+
         </form>
       </ion-card-content>
     </ion-card>
