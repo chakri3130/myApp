@@ -1,0 +1,113 @@
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+ion-content {
+  --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  padding: 16px 8px;
+  background: white;
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    
+    ion-icon {
+      font-size: 48px;
+      padding: 12px;
+      background: rgba(var(--ion-color-primary-rgb), 0.1);
+      border-radius: 50%;
+    }
+  }
+
+  ion-card-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-align: center;
+  }
+}
+
+.title-desc {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.input-wrapper {
+  margin-bottom: 16px;
+}
+
+.custom-input {
+  --border-radius: 12px;
+  --border-color: #e0e0e0;
+  --border-width: 2px;
+  --padding-start: 16px;
+  margin-bottom: 4px;
+  
+  &.ion-focused {
+    --border-color: var(--ion-color-primary);
+  }
+
+  &.ion-invalid.ion-touched {
+    --border-color: var(--ion-color-danger);
+  }
+
+  ion-icon {
+    color: #888;
+    margin-right: 8px;
+    font-size: 20px;
+  }
+}
+
+.error-msg {
+  color: var(--ion-color-danger);
+  font-size: 12px;
+  padding-left: 12px;
+  min-height: 16px;
+  
+  span {
+    display: block;
+    margin-bottom: 2px;
+  }
+}
+
+.signup-btn {
+  margin-top: 12px;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 14px 0 rgba(var(--ion-color-primary-rgb), 0.3);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  height: 54px;
+  margin-bottom: 16px;
+}
+
+.action-grid {
+  margin-top: 8px;
+}
+
+.action-row {
+  ion-button {
+    font-size: 13px;
+    font-weight: 600;
+    --color: #555;
+    text-transform: none;
+    letter-spacing: 0;
+    
+    &:hover {
+      --color: var(--ion-color-primary);
+    }
+  }
+}
