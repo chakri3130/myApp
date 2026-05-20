@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="login-container">
+    <ion-card class="login-card">
+      <ion-card-header>
+        <div class="logo-container">
+          <ion-icon name="planet" color="primary"></ion-icon>
+        </div>
+        <ion-card-title>Welcome Back</ion-card-title>
+        <p class="title-desc">Log in to your account to continue</p>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-input class="custom-input" fill="outline" label="Username or Email" labelPlacement="floating"
+          placeholder="Enter your username">
+          <ion-icon slot="start" name="person-outline" aria-hidden="true"></ion-icon>
+        </ion-input>
+
+        <ion-input class="custom-input" type="password" fill="outline" label="Password" labelPlacement="floating"
+          placeholder="Enter your password">
+          <ion-icon slot="start" name="lock-closed-outline" aria-hidden="true"></ion-icon>
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+
+        <ion-button expand="block" class="login-btn" shape="round" (click)="onLogin()">
+          Log In
+        </ion-button>
+
+        <ion-grid class="ion-no-padding action-grid">
+          <ion-row class="action-row ion-justify-content-between">
+            <ion-col size="auto">
+              <ion-button fill="clear" size="small">
+                No account? Sign up
+              </ion-button>
+            </ion-col>
+            <ion-col size="auto">
+              <ion-button fill="clear" size="small">
+                Forgot password?
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
